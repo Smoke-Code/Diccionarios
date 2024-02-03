@@ -1,0 +1,985 @@
+*{
+  /* ayuda a trabajr para que no see altere las poosicion y facilita para que trabajes en algo en conreto */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+/*
+* <main> // padre directo de las 2 etiquetas section
+*   <section> // hijo directo de main
+*     <h1>Soy un h1</h1> // hijo directo de section
+*   </sectoin>
+*   <section>
+*     <h2>Soy un h2</h2>
+*   </section>
+* </main>
+* */
+
+/* usando los tipos de selectores
+* nav = etiquetas
+* .class = clase
+* #id = id
+* * = selector universal  
+* [class]{} = selector por atributo
+* [class^="titulo"}]{} = haciendo por lo que tienen al principio
+* [class$="titulo"}]{} = haciendo por lo que tienen al final
+* [class*="titulo"}]{} = haciendo solo por lo que lo contenga 
+* h2[class] = selector por atributo
+* h1,a{} = selector combinador
+* .contenedor p{} = solamente debe estar dentro de contenedor
+* .contenedor>p{} = donde p es un hijo directo de contenedor
+* nav.contenedor{} = un nav que tiene la clase contendor dentro
+* h2+p{} = el primer hermano que no sera seleccion h2, y p que es el que sera seleccionado ojo: debe estar debajo
+* h2~p{} = teniendo en cuenta el h2 como principal va a seleccionar a todos los p  
+* */
+
+
+*{
+  text-decoration: underline;
+}
+.section{
+  border: 1px solid black;
+  text-align: center;
+  
+}
+
+
+[href]{ /* pudes hacer cualquier etiqueta  */
+  text-decoration: none; 
+   
+}
+
+/* seleccionando a los elementos que solamente tengan algo en concreto al inicio */
+
+[href^="https"]{
+  color: blue;
+}
+
+[href$="org"]{
+  background: steelblue;
+}
+
+
+[href*="contenido"]{
+  background: violet;
+}
+
+h2,a{
+  color: indigo;
+  font-family: 'arial';
+}
+
+.contenedor~p{
+  color: gold;
+}
+
+
+/* modelo de boxmodel */
+
+/* elementos bloque: que ocupan el 100% del bloque que es el contenedor que es todo el navegador */
+
+
+body{
+  margin:0; 
+  
+}
+.box{
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  
+}
+
+.box1{
+  width: 200px;
+  background: steelblue;
+}
+
+.box2{
+  /* altura */
+  height: 100px; 
+  /* ancho */
+  width: 100px; 
+}
+
+box{
+  /* margin general */
+  margin:100px;
+  /* margin: top right bottom left;   */
+  /* arriba */
+  margin-top: 10px; 
+  /* abajo */
+  margin-bottom: 10px;
+  /* izquierda */
+  margin-left: 20px;
+  /* derecha */
+  margin-right: 20px;
+
+  margin: auto;
+}
+
+boxt{
+  opacity: 0.5;
+}
+
+
+boxx{
+  /* para todos los elementos en el cual se sumaran las designacion que se agreguen como margin */
+  box-sizing: content-box;
+  /* usando box-sizing haremos que pierda la propiedad */
+  /* es mejor usarlo cuando tenemos tamanos ya asignados  */
+  box-sizing: border-box; /* usalo en el selector universal para que sea mejor */ 
+  /* si el contenido no entra puedes usaar el siguiente  */
+  overflow: hidden; /*oculta */
+  overflow: scroll; /*crea un scroll para dsplazarte*/
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+/* quitando los enlaces */
+enlaces{
+  /* recuerda que los enlaces aparecen en linea y si quieres modificar su tamano y su ancho debes de usar diplay */
+  text-decoration: none;
+  text-decoration-line: underline; 
+  text-decoration-line: dotted;
+  text-decoration-line: wavy;
+  text-decoration-line: dashed;
+  text-decoration-color: crimson;
+  /* para los enlaces debes de usar  */
+  display: inline-block;
+  background: crimson;
+  color: blue;
+}
+
+/* trabajando con especifidad */
+/* 1000 - inline css */
+/* 100 - id */
+/* 10 - class atributo */
+/* 1 - elemento */
+
+
+/* trabajando con display */
+
+di{
+  display: block; 
+  /* display: none; para quitar el elemento */
+}
+
+
+/* obligando a que herede  */ 
+obligando{
+  border:inherit;
+  padding: inherit;
+  
+}
+
+/* para que se muestre por defecto */
+
+por_defecto{
+  border: initial;
+  text-align: initial;
+}
+
+/* trabajando con el borde */
+box{
+  background: orange;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  /* border: width style color; */
+   /* style : dashed 
+    *         solid
+*             groove
+*             dotted*/
+  border-width: 100px; 
+  /* border-width: top right bottom left; */
+  border-style: dashed;
+  border-color: blue;
+  
+  border-top: 10px solid brown;
+  border-bottom: 10px solid brown;
+  /* border-right: ; */
+  /* border-left: ; */
+  
+   
+  border-radius: 30px 10px 25px 2px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 25px ;
+  border-bottom-right-radius: 2px;
+  /* para hacer un circulo con border radius recuerda que debe de ser un cuadrado usando width y heigh */
+  border-radius: 50%;
+}
+
+/* para centrar una parte rapida  */
+
+img{
+  display: block;
+  width: 100px;
+  margin: 100px auto;
+}
+
+/* para que la iamgen no se estire feo  */
+
+img{
+  object-fit: cover;
+}
+
+/* trabajando con box-shadow */
+img{
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+  background: steelblue;
+  /* box-shadow: h-offset v-offset blur spred color;  */
+  box-shadow: 10px 10px 5px 0 crimson, 
+              /* para crear otra sombra */
+              20px 0px 15px 0px yellow;
+
+}
+
+/* si trabajas con imagenes que no tienen fondo */
+
+.go{
+  display: block;
+  width: 350px;
+  margin: 30px auto;
+  /* drop-shadow(h-offset v-offset blur color); */
+  filter: drop-shadow(10px 10px 10px gold);
+  
+  
+}
+
+/* trabajando con colores */
+
+color{
+  /* nombres de color */
+  color: black;
+  
+  /* colores en rgb */
+  /* background: rgb(red, green, blue); */
+  background: rgb(20,20,20); 
+  
+  /* colores en rgba */
+  /* background: rgba(red, green, blue, alpha); */
+  background: rgba(78,15,138,0.5);
+
+  /* colores hexadecimales */
+  /* background: #redgreenblue */
+  /* background: #rrggbb; */
+  background: #35FF87;
+  
+  /* colores en hsl */
+  /* background: hsl(hue, saturation, lightness);  */
+  background: hsl(0, 100%, 50%);
+
+  /* colores en hlsa  */
+  /* background: hsla(hue, saturation, lightness, alpha);  */
+  background: hsl(0, 100%, 50%, .5);
+  
+}
+
+/* trajando con background */
+
+back{
+  width: 70%;
+  height: 300px;
+  margin: 10px auto;
+  background: rgb(100,100,100);
+  background-color: rgb(100,100,100);
+  background-color: transparent;
+  background-image: url("direccion de la imagen");
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  /* background-position: x y; */
+  background-position: 10px 20px;
+  /* recuerda que solo podemos hacer uso de 2  */
+  background-position: top bottom right left;
+  
+  background-size: 200px;
+  /* para que ajuste mejor la imagen de fondo */
+  background-size: contain;
+  /* hace lo mismo solo que mas grande todo el elemento */
+  background-size: cover;
+  
+  background-attachment: scroll;
+  /* el fondo tomara todo fijamente y sera el 100% de la pagina  */
+  background-attachment: fixed;
+
+  /* background-image: linear-gradient(direction, color stop, color stop); */
+  background-image: linear-gradient(to top, crimson, pink);
+  background-image: linear-gradient(to top right, crimson, pink);
+  /* trabajando con grados */
+  background-image: linear-gradient(90deg, crimson, pink);
+  /* trabajando con un fondo en las letras */
+  background-image: linear-gradient(crimson,steelblue), url("direccion de la imagen");
+  
+}
+
+
+/* trabajando con texto  */
+
+text{
+  text-align: right;
+  text-align: left;
+  text-align: center;
+  /* no es muy usado en paginas web */
+  text-align: justify;
+  /* espacio entre las palabras */
+  word-spacing: 3px;    
+  /* text-shadow: h-offset v-offset blur spred color;  */
+  text-shadow: 3px 3px 6px rgba(0,9,9,.4);
+  text-transform: uppercase;
+  text-transform: lowercase;
+  /* todo en mayuscula */
+  text-transform: capitalize;
+  /* mide la linea, funciona en textos  */
+  line-height-step: 40px;
+  
+  
+}
+
+/* usando fonts */
+
+fon{
+  font-variant: normal;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 32px;
+  font-style: italic;
+  font-style: oblique;
+  /* es mejor usarlo en body ya que puede usar y es mas heredable */
+  font-family: cursive, arial, Helvetica; 
+}
+
+/* undidades de medida */
+.uni{
+  /* unidades fijas  */
+  font-size: 20px;
+  /* unidades flexibles */
+  /* el valor de 1rem es 16 y se  multiplican cuaquier 2rem * 16 lo que seria 32px  */
+  font-size: 1rem;
+  /* em es relativo al padre es mejor usarlo en cualquier objeto menos en texto  */
+  /* recueda que 1em llamara al padre */
+  font-size: 1em;
+  /* haciendo uso de los porcentajes */
+  height: 100%;
+  height: 50%;
+  
+  /* haciendo uso de la viewport width, viewport height vw-vh  */
+  width: 50vw;
+  height: 100px;
+  height: 100vh;
+}
+
+/* trabajando con listas */
+li{
+  list-style: none;
+  list-style-image: url("direccion");
+  /* adentro */
+  list-style-position: inside;
+  /* afuera */
+  list-style-position: outside;
+}
+
+
+/* haciendo uso de las pseudoclases */
+
+enlace.link{
+  color: brown;
+}
+
+.enlace:visit{
+  color: #000;  
+}
+
+event:active{
+  padding: 23px;
+}
+
+target:target{
+  margin-left: 50px;
+  transition: .3s;
+}
+
+/* haciendo una seleccion rapida para ingresos rapidos de form  */
+input[type="text"],
+input[type="email"]{
+  
+  width: 100%;
+  padding: 12px 5px;
+  margin-bottom: 20px;
+  border: none;
+  /* quita el border predispuesto */
+  outline: none;
+}
+
+/* donde nos posicionemos el focus  */
+input:focus{
+  background: rgba(200,50,60,.5);
+}
+
+/* checked solamente sirve para elementos checkbox radio  */
+input[type="checkbox"]:checked+label{
+  background: crimson;
+  color: blue;
+}
+
+
+/* seleccion a un hijo que tiene en el estado focus */
+
+.form:focus-within{
+   background: darkcyan;
+}
+
+
+/* trabajando con la raiz */
+:root{
+  background: steelblue;
+  /* trabajando con variables  */
+}
+
+/* negando o excluyendo a la clase indicada en el parentesis   */
+h3:not(.title){
+ color: green; 
+}
+
+/* el estado hover cuando pasas por encima  */
+h2:hover{
+ background: indigo; 
+}
+
+
+/* trabajando con div */
+/* definiendo a todos los div que son del mismo tipo */
+div:only-of-type{
+  background: tomato;
+}
+
+/* el primero de su tipo */
+box:first-of-type{
+  background: violet; 
+}
+
+/* eligiendo cual quiero seleccionar sobre cual es el tipo que vamos a seleccionar  */
+/* dt:nth-of-type(n){  n = es igual a un iterador*/
+dt:nth-of-type(2n){
+  background: blue;   
+}
+
+/* usando pseudoelementos */
+/* estamos haciendo esto para que cambie la seleccion del elemento */
+p::selection{
+  background: crimson;
+  color: white;
+}
+
+/* modificar la primera linea de un texto */
+
+p::first-line{
+  color: violet;
+  font-size: 15px;
+}
+
+card::before{
+  content: "hola"; 
+}
+
+
+card::after{
+  content: "george";
+}
+
+/* trabajando el posicionamiento de los elementos */
+
+/* todos los elementos por defecto son estaticos  */
+static{
+  /* valor por defecto */
+  position: static;
+  
+}
+/* al usar relative se desbloquean top left right bottom */
+relative{
+  background: crimson;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+/* se posiciona de acuerdo al ancestro  */
+absolute{
+  background: indigo;
+  /* salen del flujo */
+  position:absolute;
+  left: 200px;
+  /* si su ancestro es un relative */
+  /* entonces se pondra donde inicia relative */
+  /* si tambien tiene un posicionamiento fixed tambien funcionaria  */
+ 
+  /* z-index nos ayuda para que se posicionen los valores tanto puede ser valor positivo o negativo */
+  z-index: 1;
+}
+
+/* se posiciona fijo en la posicion asignada */
+fixed{
+  background: violet;
+  position: fixed;
+  
+}
+
+/* navegacion en la misma pagina es  */
+/* se les llama por id  */
+
+
+/* trabajando con variables */
+/* recuerda que eso se trabaja en el root */
+:root{
+  --color1 : rgba(crimson);
+  --box-shadow: 5px 5px 10px rgba(0,9,9,.5);
+  --gradient: linear-gradient(to top, #b34430, #fbc2eb 100%);
+}
+
+/* asignando el color */
+
+/* recuerda que los alcanses de las variables deben ser creadas en root si quieres que tenga alcance total pero si lo haces en una designacion solo sera para el padre y para sus hijos */
+
+card_title{
+  color: var(--color1);
+  /* usando un follback  */
+  color: var(--color21, crimson);
+  /* podemos hacer uso de varios follbacks */
+  color: var(--color21, var(--color22, crimson));
+}
+
+/* trabajando con media queries */
+/* media para imprimir  */
+@media print{
+  .title{
+    color: blue;
+  }
+}
+
+
+/* para pantallas tanto de telefonos, televisores, laptops */
+/* recuerda que el tipo de la especifidad que tienen tanto en las clases  */
+@media screen and (max-width: 600px){
+  .title{
+    background: black;
+    color: white;
+  }
+}
+
+
+/* cuando la pantalla esta en horizontal */
+@media screen and(orientation: landscape){
+  h1.tilte{
+    color: steelblue;
+    background: #000;
+    height: 100vh;
+
+  }
+}
+
+
+/* cuando la pantalla esta en vertical */
+
+@media screen and(orientation: portrait){
+  h1.tilte{
+    color: steelblue;
+    background: #000;
+    height: 100vh;
+  }
+}
+
+/* conbinando */
+
+@media screen and (orientation: portrait) and (max-width:600px){
+  .title{
+    text-align: left;
+  }   
+}
+
+
+/* usando flexbox */
+
+container{
+  /* los pone en fila y comienzan desde son insertados */
+  /* los estira para toda la acupacion que eso esta ocupando */
+  /* los elementos sse vuelven flexibles yse modifican de acuerdo al tamano designado */
+  display: flex;
+  /* asignara propiedades en linea y no en propiedades de google  */
+  display: inline-flex;
+  /* mantiene los estirado */
+  align-items: stretch;
+  /* modifica para que los items para que modifiquen */
+  align-items: flex-start;
+  /* usando para la direccion de flexbox */
+  /* en columna */
+  flex-direction: column; 
+  /* en columan de forma reversa */
+  flex-direction: column-reverse; 
+  /* en fila */
+  flex-direction: row; 
+  /* en fila pero en reversa */
+  flex-direction: row-reverse; 
+}
+
+
+/* usando flex-wrap */
+
+conten{
+  /* propiedad por defecto es nowrap  */
+  flex-wrap: nowrap;
+  /* se ajusta al tamano indicado, donde sera factible que se va a ajustar, asi mismo si no alcanza crea otra linea  */
+  flex-wrap: wrap;
+  /* ya que inicia al principio lo lanza al final   */
+  flex-wrap: wrap-reverse;
+}
+
+
+/* alineamiento en flexbox */
+
+ali{
+  /* por defecto es flex-start = donde iniciaria desde donde se marca */
+  justify-content: flex-start;
+  /* ahora el flex-end es lo contrario = donde va a iniciar al final */
+  justify-content: flex-end;
+  /* centrara los elementos que se encuentran  */
+  justify-content: center;
+  /* va a distribuir especificamente el espacio pegandose el primero donde comienza y el ultimo donde finaliza */
+  justify-content: space-between;
+  /* distibuye especificamente el mismo espacio para todos los lados es como ponerle un margin para su separcion */
+  justify-content: space-around;
+  /* este si distribuye el missmo espacio para todos  */
+  justify-content: space-evenly;
+  
+}
+
+/* otro tipo de alineamiento */
+
+content{
+  /* para que funcione debe de haber espacio disponible */
+  /* es estrirar los elementos para la parte inferior  */
+  /* si no tiene height y width definido se estira  */
+  align-items: stretch;
+  /* centrara los items  */
+  align-items: center;
+  /* se alinean de acuerdo a la linea base */
+  align-items: baseline; 
+  
+  /* puede tener los mismo contentidos de justify-content */
+  align-items: flex-end;
+}
+
+
+/* trabajando con flexbox */
+/* hace que crezca  */
+crece{
+  flex-grow: 1;
+  
+}
+
+/* usando flex shrink */
+completa{
+  /* por defecto es el valor que tiene */
+ flex-shrink: 1; 
+}
+
+
+/* haciendo uso de flex basis */
+
+fbasic{
+  /* tiene mas valor que width y height */
+  flex-basis: 150px;
+  
+}
+
+
+/* haciendo uso de gap */
+lik{
+  /* hace la separacion entre los elementos */
+  gap: 20px;
+}
+
+/* trabajando con grid */
+
+grid{
+  /* se ponen uno debajo del otro  */
+  display: grid;
+  /* para las columnas, asi mismo tienen efecto  */
+  grid-auto-flow: colum;
+  /* para las filas */
+  grid-auto-flow: row;
+
+  /* se estiran los elementos */
+  align-items: stretch;
+}
+
+/* trabajando las filas y columnas en grid */
+
+fc{
+  display:grid;
+  /* definir las columnas */
+   /* creando 3 columnas */
+  grid-template-columns: 100px 2cm 30% ;
+  /* repitendo para que tengan el mismo tamano */
+  grid-template-columns: repeat(10, 10%);
+  /* creando fraciones en vez de las filas o columnas */
+  /* divide las filas por fracciones  */
+  /* pueden modificarse la cantidad de fracciones que se van a asignar */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* el valor auto se va a ajustar a su contenido */
+  grid-template-columns:  1fr 1fr 1fr auto;
+
+  /* es tambien aplicable las mismas razones a las filas */
+  grid-template-rows: 1fr 1fr 1fr auto;
+  
+}
+
+/* posicionamiento de grid  */
+gridl{
+  /* indicando en que columna va a empezar en los bloques de grid  */
+  grid-column-start: 3;
+  /* indicando en que columna va a terminar los bloques  */
+  grid-column-end:5;
+  /* indicando que la fila va a iniciar */
+  grid-row-start: 3;
+  /* indicando que la dila va a terminar */
+  grid-row-end: 3;
+  
+  /* compactando las columnas y las filas */
+  /* donde inicia y donde termina */
+  grid-column: 3/5; 
+}
+
+
+grid{
+  /* indicando cuantaas columnas va a ocupar el elemento */
+  grid-column: span 2;
+  /* indicando cuantas filas va a ocupar el elemento */
+  grid-row: span 3;
+
+  /* empieza en la columna 2 y ocupara 3 columnas */
+  grid-column: 2 / span 3;
+  /* si quieres que ocupe toda la linea  */
+  grid-column: 1/-1;
+  
+  grid-row: 3/-1;
+  /* grid-area: row-start column-start row-end column-end */
+  grid-area: 2/2/3/5;
+}
+
+
+/* colocacion de los elementos por defecto */
+
+colo{
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  /* para llenarse los espacios en blanco */
+  grid-auto-flow: dense;
+}
+
+
+/* trabajando con grid area */
+
+gr{
+  /* las areas deben de ser cuadradas o rectangulares */
+  grid-template-areas: "juan pedro jesus aldair";
+
+  grid-template-areas: 
+    "juan sanchez elias picachu"
+    ". . . .";
+
+  grid-template-areas: 
+    "header header header header header"
+    "main main main slider slider"
+    "main main main slider slider"
+    "main main main slider slider"
+    "footer footer footer footer footer";
+}
+
+
+grd{
+  /* grid-template-columns: [linea-inicial] 1fr [linea-final]; */
+  grid-template-columns: [linea1] 1fr [linea2] 1fr [linea3] 1fr [linea4];
+  grid-template-rows: [linea1] 1fr [linea2] 1fr [linea3];
+
+  /* al usar nombres puedes usarlo de la siguiente forma */
+  grid-column: linea2/ linea4;
+
+  grid-template-columns: repeat(3,[linea-start] 1fr [line-end]);
+  grid-row: linea-start/ line-end;
+  
+}
+
+/* valores dinamicos para tracks */
+gdp{
+    /* por defecto es el tamano del contenido */
+    /* crece de acuerdo al contenido que se requiere */
+  grid-template-columns: min-content max-content;
+  grid-template-rows: min-content max-content;
+    /* los que sisgnifica es que se va ajustaar */
+  grid-template-columns: fit-content(200px);
+                              /* width   height */
+  grid-template-columns: minmax(80px, 300px);
+  grid-template-columns: minmax(80px, 300px) minmax(30px,70px);
+
+  /* crea tantas columnas como sea posible usando el 10% */
+  grid-template-columns: repeat(auto-fill, 10%);
+                                          /* tamano de y divido en fraccion */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* alineacion con el css grid */ 
+ag{
+    justify-content: stretch;
+    /* al inicio de las columnas */
+    justify-content: start;
+    /* al final de las columnas  */
+    justify-content: end;
+    /* centra los items  */
+    justify-content: center; 
+    
+
+    align-items: start;
+    
+    align-items: stretch;
+
+    align-items: end;
+    align-items: center;
+   
+
+    place-items: start/end;
+    place-items: start;
+    place-items: end;
+    place-items: center;
+    place-items: start center;
+
+    /* para los padres */
+    /* place-content: align-content justify-content; */
+    place-content: center; 
+    /* para los hijos */
+    /* place-self: align justify ; */
+    place-self: start-end;
+    place-self: center;
+    
+    
+    
+  }
+  
+/* usando clipPath */
+
+cli{
+    /* puedees cambiar diferentes formas */
+                    /* tamano  donde se ubica */
+    clip-path: circle(50% at top center);
+    /* top right bottom left donde es 30px*/
+    clip-path: inset(30px round 30px 80px); 
+    
+  }
+
+  /* usando transformaciones */
+
+tra{
+  transform: translateX(200px);
+  transition: transform .4s;
+  transform: translateY(40px); 
+  /* transform: translate(x,y); */
+  transform: translate(100px,20px);
+
+  transform: rotate(60deg);
+  transform: rotate(40grad);
+    
+  transition: .3s all;
+  /* se estira */
+  transform: translate(100%) scaleX(2);
+
+  transform-origin: bottom; 
+  transform-origin: center top; 
+  transform-origin: center bottom; 
+  transform-origin: center right; 
+    
+  }
+
+  /* trabajando con transition */
+
+trnstion{
+    /* donde esta all haremos uso de las propiedades  */
+    transition-property: all; 
+    /* haremos uso de la duracion de la transicion */
+    transition-duration: .5s;
+
+     
+    transition-timing-function: ease ;
+    transition-timing-function: ease-in ;
+    transition-timing-function: ease-out ;
+    transition-timing-function: linear;
+    /* por pasos */
+    transition-timing-function: steps(6, end);
+
+    transition-delay: circle;
+              /* tiempo a tomar - transition-timing */
+    transition: clip-path .5s ease,
+                transform 1s .5s;
+  }   
+
+
+  /* trabajando con una animacion  */
+
+@keyframes animacion{
+  0%{
+    background: #000;
+  }  
+  30%{
+    background: crimson;
+    translate: 10px;
+  }
+}
+
+
+cuadrado{
+  animation: animaciones 2s;
+  animation-name: animacion, animacion2;
+    /* tiempo de la animacion */
+  animation-duration: 3s;
+    /* del final para adelante */
+  animation-direction: reverse;
+    /* de adelante al final */
+  animation-direction: alternate;
+
+    animation-play-state: paused;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+
+  }
+
+  @keyframes animaciones{
+    from{
+    /* como empieza   */
+    transform: scale(10px);
+  } 
+  
+  to{
+    transform: scale(20px);
+    
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+
+

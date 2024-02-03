@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.a1 {
+  background-color: #729eff;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.t1 {
+  color: white;
+  font-size: 100px;
+  width: 1000px;
+  margin-top: 100px;
+  padding: 100px;
+  display: table;
+  position: absolute;
+}
+
+.tit2 {
+  color: white;
+  position: relative;
+  font-size: 20px;
+  margin-left: 30px;
+  transform: translate(20%, 60%);
+}
+.i1 {
+  width: 500px;
+  height: 500px;
+  transform: translate(95%, 20%);
+  position: relative;
+  float: right;
+}
+
+.a2 {
+  background-color: #3f8880;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.t {
+  position: absolute;
+  font-size: 18px;
+}
+.t2 {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+
+  transform: translate(60%, 180%);
+}
+
+.text1 {
+  transform: translate(20%, 130%);
+  width: 600px;
+  margin-top: 120px;
+  margin-left: 100px;
+  color: white;
+}
+
+.text2 {
+  width: 600px;
+  transform: translate(36%, 350%);
+  margin-top: 20px;
+  color: white;
+}
+
+.team {
+  width: 900px;
+  height: 500px;
+  position: relative;
+  margin-right: 200px;
+  margin-top: 70px;
+  transform: translate(80%, 5%);
+  float: right;
+}
+
+.b1 {
+  position: absolute;
+  transform: translate(145%, 900%);
+  width: 200px;
+  height: 60px;
+  font-size: 16px;
+}
+
+.car {
+  background-color: #9dc09d;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.tra {
+  font-size: 50px;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 20px;
+}
+
+.targ {
+  width: 400px;
+  height: 500px;
+  justify-content: center;
+  margin: 170px 0px 0px 130px;
+  display: block;
+  padding: 20px;
+  align-items: start;
+  border-radius: 20px;
+  display: absolute;
+  box-shadow: 2px 2px 10px black;
+}
+
+.cards {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trab {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  transform: translate(-5%, -10%);
+  border-radius: 20px 20px 0px 0px;
+  height: 200px;
+  float: left;
+}
+
+.tt {
+  width: 300px;
+  margin-top: 185px;
+  margin-left: 50px;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  position: absolute;
+}
+
+.tdes {
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 30px;
+  width: 300px;
+}
+.cbtn {
+  position: relative;
+  font-size: 14px;
+  width: 200px;
+  height: 40px;
+  margin-top: 180px;
+  margin-left: 80px;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 30px;
+}
+.sol {
+  background-color: #daf8e0;
+  width: 100vw;
+  height: 20vh;
+}
+.tt3 {
+  font-size: 30px;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 38%;
+}
+
+.simg {
+  position: relative;
+  background-color: #7e8f80;
+  width: 100vw;
+  height: 100vh;
+}
+
+.titsi {
+  position: absolute;
+  font-size: 40px;
+  margin-top: 40px;
+  margin-left: 40%;
+}
+
+.caja {
+  width: 380px;
+  height: 220px;
+  position: table;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 10px;
+}
+
+.cl {
+  margin: 80px;
+  transform: translate(0%, 40%);
+}
+
+.c2 {
+  margin: 80px;
+  transform: translate(0%, -10%);
+}
+
+.talen {
+  background-color: white;
+  width: 100vw;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+}
+.tlen {
+  font-size: 30px;
+  color: salmon;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 40%;
+}
+
+.len {
+  position: table;
+  width: 200px;
+  height: 100px;
+  margin-top: 150px;
+  margin-left: 180px;
+}
+
+.footer {
+  background-color: #bea74b;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+
+.tfo {
+  position: absolute;
+  font-size: 30px;
+  margin-top: 160px;
+  margin-left: 20%;
+}
+
+.ifo {
+  position: sticky;
+  float: right;
+  width: 500px;
+  height: 400px;
+  margin-right: 300px;
+  margin-top: 120px;
+}
+
+.reser {
+  position: absolute;
+  margin-top: 50px;
+  transform: translate(100%, 0%);
+  font-size: 16px;
+}
+
+svg {
+  border: 1px solid white;
+  border-radius: 100px;
+  margin-top: 250px;
+  margin-left: 30px;
+  position: sticky;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  transform: translate(280px, 10px);
+  box-shadow: 0px 0px 2px black;
+}

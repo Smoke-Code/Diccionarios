@@ -1,0 +1,599 @@
+/* sintaxis basica de css */
+p{
+  color: blue;
+  font-size: 14px;
+}
+/* selectores de elementos */
+
+p{ }
+div{}
+
+/* selectores de id */
+
+#mi{}
+
+/* selectores de clase */
+.rosa{}
+
+/* medidas absolutas */
+/* porcentaje */
+% 
+/* centimetros */
+cm
+/* inch */
+in
+/* milimetros */
+mm
+/* pica */
+pc
+/* puntos */
+pt
+/* pixel */
+px
+
+
+/* medidas relativas */
+/* se encuentra en la fuente  */
+ch
+/* tamano de fuente actual del elemento */
+em
+/* toma el tamano de la cuadricula definida */
+ex
+/* el tamano de la fuente raiz */
+rem
+/* altura de la ventana */
+vh
+/* ancho de la ventana */
+vw
+/* ancho de todo divido en dos */
+vm
+
+
+/* fondos */
+/* modificando fondos */
+p{
+/* especifica una o mas imagenes de fondo para un elemento */
+  background-image: url(), gradients, none;
+    /* posicion de las imagenes de fondo */
+  background-position: px, %, em, x-%, y-%, x-pos, y-pos;
+  background-position: top left | top center | top right | center left | center center | center right|            bottom left | bottom center | bottom right;
+    /* tamano de la imagen de fondo */
+  background-size: lenght, %, auto | cover | contain;
+    /* especifica si la imagen de fondo se repetira y en que direccion */
+  background-repeat: repeat, repeat-x, repeat-y,no-repeat;
+    /* especifica si la imagen de fondo se desplaza con el resto del contenido o se mantiene fija */
+  background-attachment: scroll, fixed, local; 
+  /* especifica el origen de posicionamiento de la imagen de fondo */
+  background-origin: border-box, padding-box, content-box;    
+  /* especifica el area de recorte de la imagen de fondo */
+  background-clip: border-box,padding-box, cotent-box;
+  /* especifica el color de fondo del elemento.  */
+  background-color: rgb,rgba, hex,color, transparent;
+
+}
+
+c{
+    border: 10px solid black;
+    /* ancho del borde */
+    border-width: 10px, medium, thick, lenght;
+    /* stilo del borde */
+    border-style: solid, none, hidden, dotted, dashed,double, groove, ridge, inset, outset;
+    /* color de borde */
+    border-color: blue;
+    border-bottom-width: 10px;
+    border-left: 10px;     
+    border-top: 10px;
+    border-right: 10px;
+    
+    box-shadow: inset, none;
+    border-collapse: collapse, separate;
+    border-radius: 10px 10px 20px 5px;
+
+    float: left, right,none;
+    height: auto, length, 5%;
+    max-height: none, lenght, 10%;
+    max-width: none, lenght, 100%;
+    min-height: none, lenght, 40%;
+    width: none, lenght, 5%;
+    margin:auto 10px 20px 40px 5px;
+
+    padding: 10px 10px 10px 10px auto;
+
+    display: none, inline, block, inline-block, flex, inline-flex, grid, inline-grid, contents,list-item, run-in,compact, table, inline-table, table-row-group,table-header-group, table-footer-group, table-row, table-column-group, table-column, table-cell, table-caption, ruby, ruby-base, ruby-text,ruby-base-container, ruby-base-group,ruby-text-group;
+
+    overflow: visible, hidden,scroll, auto, no-display, no-content, overflow-x, overflow-y;
+    overflow-style: auto, marquee-line,marqueeblock;
+    overflow-x: visible, hidden, scroll, auto, no-display, no-content ;
+    visibility: visible, hidden, collapse;
+    clear: left, right,both,none;
+    
+  }
+
+fuente{
+    font-size-adjust: none, inherit, number;
+    font-family: serif,sans-serif, name;
+    font-style: normal, italic,oblique,inherit;
+    font-variant: normal,small-caps, inherit;
+    font-size: xx-small, x-small,small, medium, large,x-large, xx-large, inherit, lenght, 10%;
+    font-weight: normal, bold, bolder, lighter,100,200,300,400,500,600,700,800,900, inherit;   
+    
+  }
+
+text{
+    direction: ltr,rtl,inherit;
+    hanging-punctuation: none, start, end, endedge;
+    letter-spacing: normal, lenght, 10%;
+    text-outline: none, color,lenght;
+    unicode-bidi: normal, embed,bidi-override;
+    white-space: normal,pre,nowrap, pre-wrap, preline;
+    white-space-collapse: preserve, collapse, preserve-spaces, discard;
+    punctuation-trim: none, start,end,adyacentes;
+    text-align: start,end,left, right, center,justify;
+    text-align-last: start, end, left,right,center, justify;
+    text-decoration: none,underline, overline, line-through, blink;
+    text-shadow: none, color, lenght;
+    word-break: normal, keep-all, loose,break-all;
+    word-wrap: normal, nowrap;
+    text-emphasis: none, accent, dot,circle,disc, before, after;
+    text-indent: lenght, 10%;
+    text-justify: auto, inter-word, inter-ideograph, inter-cluster, distribute,kashida,tibetan;
+    text-transform: none, capitalize, uppercase, lowercase;
+    text-transform: none, capitalize, uppercase, lowercase;
+    text-wrap: normal, unrestricted, none;
+    word-spacing: normal, lenght, 10%;
+    
+    
+  }
+
+columna{
+    column-count: auto, number; 
+    column-fill: auto, balance;
+    column-gap: normal, lenght; 
+    column-rule: column-rule-width, column-rule-style,column-rule-color;
+    column-rule-style: border-style;
+    columns: column-width;
+    columns: column-count;
+    column-rule-width: thin, medium,thick, lenght;
+    column-span: 1, all;
+    column-width: auto, lenght;
+  }
+
+color{
+    color: inherit, color;
+    opacity: inherit, number;
+    
+  }
+
+
+table{
+    border-collapse: collapse, separate;
+    empty-cells: show, hide;
+    border-spacing: lenght;
+    table-layout: auto, fixed;
+    caption-side: top, bottom, right, left;
+    
+  }
+spech{
+    cue: cue-before,cue-after;
+    cue-before: url, silent, x-soft, medium , loud, x-loud, none, inherit, number, 10%;
+    mark: mark-before,mark-after; 
+    voice-pinch-range: x-low,low, medium, high, xhigh, inherit, number;
+    voice-stress: strong, moderate,none, reduced, inherit;
+    voice-volume: silent, x-soft,soft,medium,loud, x-loud, inherit, number, 10%;
+    cue-after: url, silent,x-soft,soft,medium,high, xhigh,inherit,number, 10%;
+    pause: pause-before, pause-after;
+    pause-before: none, x-weak, weak,medium, strong,x-strong,inherit,time;
+    caption-side: top, bottom,left,right;
+  
+  }
+
+listm{
+    list-style-image: none, url;
+    list-style-type:none;
+  }
+
+animat{
+    animation-name: none, IDENT;
+    animation-duration: time;
+    animation-timing-function: ease, linear, ease-in, ease-out(), ease-in-out(),cubic-bezier() ;
+    animation-delay: time;
+    animation-iteration-count: inherit, number;
+    animation-direction: normal, alternate;
+    animation-play-state: running, alternate;
+    motion-rotation: angle, rotation-point, position;
+  }
+
+
+transla{
+  transition-delay: time;
+  transition-duration: time;
+  transition-property: none,all;
+  transition-timing-function: ease, linear, ease-in(), ease-out(), cubic-bezier();
+    
+  }
+
+aparare{
+    appearance: normal, inherit;
+    cursor: auto, crosshair, default, pointer, move, e-resize, ne-resize, nw-resize, n-resize, se-resize,sw-resize, sw-resize, s-resize, w-resize, text,wait, help, url;
+    icon: auto, inherit, url;
+    nav-index: auto, inherit, number;
+    nav-up: auto,inherit;
+    nav-right: auto, inherit;
+    nav-down: auto, inherit;
+    nav-left: auto, inherit, root;
+    resize: none, both, horizontal,vertical, inherit;
+    
+  }
+
+
+
+
+/* pseudoclases */
+/* selecciona cuando el mouse esta sobre ellos  */
+a:hover{} 
+/* selecciona los elementos que estan siendo activados por el usuario */
+a:active{}
+/* selecciona elementos que estan marcados/chekeados(radio, buttons, checkboxes) */
+a:checked{}
+/* selecciona los elementos desahabilitados */
+a:disabled{}
+/* selecciona elemenots que no tienen hijos */
+a:empty{} 
+/* selecciona los elementos habilitados */
+a:enabled{}
+/* selecciona el primer hijo de su padre */
+a:first-child{}
+/* sleeciona el elemento que tiene el foco(a taves del tabbing o un click) */
+a:focus{}
+/* selecciona elementos con valores no validos */
+a:invalid{}
+/* selecciona el ultimo hijo de su padre */
+a:last-child{}
+/* selecciona elementos que no coinciden con el selector indicado */
+a:not()
+/* selecciona elemento requieridos  */
+a:required{}
+/* selecciona el elemento raiz del documento */
+a:root{}
+/* selecciona el elemento apuntado por el hash en la URL */
+a:target{}
+/* selecciona elementos con valores validos */
+a:valid{}
+/* selecciona enlaces visitados */
+a:visited{}
+/* selecciona el primer hijo */
+a:nth-child()
+/* especificando el lenguage que se va a usar  */
+a:lang
+/* selecciona al hijo del hijo */
+a:nth-last-child()
+
+
+/* un ejemplo de texto y fuente  */
+
+p{
+  /* color negro */
+  color: #333;
+  /* fuente arial */
+  font-family: arial, sans-serif;
+  /* tamano */
+  font-size: 16px;hh
+  /* estilo */
+  font-style: italic;
+  /* tipo  */
+  font-weight: bold;
+  /* interlineado */
+  line-height: 1.5;
+  /* alineacion centrada */
+  text-align: center;
+  /*decoracion subrayado */
+  text-decoration: underline;
+  /* mayusculas  */
+  text-transform: uppercase;
+  /* espacio entre lineas */
+  letter-spacing: 2px;
+  /* espacio entre palabras */
+  word-spacing: 15px;
+  /* sin saltos de linea  */
+  white-space: nowrap;
+}
+
+/* modelo de caja */
+
+div{
+  /* ancho */
+  width: 300px;
+  /* altura */
+  height: 100px;
+  /* relleno interno del elemento */
+  padding: 20px;
+  /* padding-top|padding-right|padding-bottom|padding-left; */
+  
+  /* margen exterior del elemento */
+  margin: 10px;
+  /* margin-top| margin-right| margin-bottom | margin-left; */
+  
+  /* borde que rodea el relleno del contenido */
+  border: 1px solid black;
+  /* border-width: ancho del borde */
+  /* border-radius: establece bordes redondeados */
+  /* border-style: solid,dotted,dashed,etc */
+  /* border-color: color del borde */
+  
+  /* define como se calculan las dimensiones */
+  box-sizing: border-box;
+
+  /* tipo de posicionamiento : static, relative, absolute, fixed */
+  position: static;
+
+  /* flotacion de la caja left, right, bottom, none, top */
+  float: top;
+
+  /* ajuste de contenido multimedia embedido */
+  object-fit: ;
+   
+  /* comportamiento de contenido que excede : visible, hidden, scroll, auto */
+  overflow: visible;
+    
+}
+
+/* tipos de posicionamiento */
+
+.static{
+  /* posicionamiento normal, flujo normal */
+}
+
+.relative{
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.absolute{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.flotado{
+  float: left;
+  
+}
+
+.inline-block{
+  /* tambien puede ser inline o block */
+  display: inline-block; 
+  width: 100px;
+  height: 100px;
+
+}
+
+
+/* usando CSS GRID  */
+/* permite dividir el espacio en filas y columnas para hacer layouts en dos dimensiones */
+
+.grid{
+  display: grid;
+  grid-template-columns: 100px 100px 100px ;
+  grid-template-rows: 100px 100px;
+}
+
+/* haciendo la posicion de items */
+item1{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* usando CSS FLEXBOX */
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+
+/* Selectores de atributos */
+/* permiten seleccionar elementos por un atributo especifico o valor de atributo */
+[type = "submit"]{
+  /* estilos para el boton */
+}
+
+/* selectores de hermanos adyacentes(+) y generales(-): permiten seleccionar elementos */
+/* que estan inmediatamente despues o en cualquier partes despues de otro elemento */
+
+h2 + p{
+  /* estilos para parrafos despues de h2 */
+}
+
+h2 ~ p{
+  /* estilos para parrafos despues de cualquier h2 */
+}
+
+/* selectores de hijo directo(>) : apunta a elemtnos que son hijos directos de otro elemento */
+ul >li{
+  /* estilos para li directo dentro de ul */
+}
+
+/* combinadores : permiten combinar varios selectores para hacer reglas mas especificas */
+div.clase1.clase2{
+  /* elemeno con ambas clases   */
+}
+
+/* Pseudo-elementos */
+
+/* la primera linea del texto de un elemento */
+p::first-line{
+  /* estilos para la primera linea */
+}
+/* la primera letra del texto de un elemento */
+p::first-letter{
+  /* estilos para la primera letra */
+}
+/* contenido antes del elemento */
+p::before{
+ content: "texto antes"; 
+}
+/* contenido despues del elemento */
+p::after{
+  content: "texto despues";
+}
+
+/* usando el posicionamiento avanzado */
+
+/* z-index */
+/* contorla el orden de apilamiento de elementos que se intersectan. Un valor mas alto pone al  */
+/* elemento encima de otros con un z-index mas bajo */
+.elemento1{
+  z-index: 1;
+}
+.elemento2{
+  /* por encima del 2 */
+  z-index: 2; 
+}
+
+/* alineacion vertical */
+.container{
+  /* alineacion vertical al centro */
+  align-items: center; 
+}
+
+/* wrap */
+.container{
+  /* pasar elementos a la siguiente linea */
+  flex-wrap: wrap;
+}
+
+/* direccion */
+.container{
+  /* direccion vertical */
+  flex-direction: colum;
+}
+
+/* ordenamiento */
+.item1{
+  /* orden2 */
+  order: 2;
+}
+
+.item2{
+  /* orden 1 */
+  order: 1;
+}
+
+/* flexibidad */
+.item{
+  /* crecer 2 veces mas que otros */
+  flex-grow: 2;
+  /* no reducirse */
+  flex-shrink: 0;
+  /* tamano base */
+  flex-basis: 300px;
+}
+
+
+/* shorthand */
+.container{
+  /* direccion e wrap */
+  flex-flow: row wrap;
+}
+
+/* funcion repeat */
+/* permite repetir el numero de columnas/ filas con una sintaxis mas corta */
+.grid{
+  grid-template-columns: repeat(3.100px);
+}
+
+/* minmax() */
+/* define un tamano minimo y maximo para tracks */
+.grid{
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+
+/* auto-fill y auto-fit */
+/* generan columna/filas implicitas segun el espacio disponible */
+.grid{
+  grid-template-columns: repeat(auto-fill, 100px);
+  
+}
+
+
+/* alineacion de tracks */
+/* alinea el contenido de las celdas horizontales y verticales */
+.cell{
+  align-self: center;
+  justify-self: end;
+}
+
+/* areas */
+/* permiten asignar nombres a grupos de celdas */
+.grid{
+  grid-template-areas:"header header" "sidear content"
+    
+}
+
+/* meta viewport */
+<meta name="viewport" content="width=device-witdh, initial-scale =1 ">
+
+/* media queries */
+/* estilos para moviles */
+@media(max-with: 767px){
+  /* estilos para pantallas pequenas */
+}
+
+/* estilos para tablets */
+@media (min-width: 768px){
+  /* estilos para pantallas medianas */
+}
+@media(min-width: 1024px){
+  /* estilos para pantallas grandes */
+}
+
+/* imagenes responsivas */
+/* <img src="img.jpg" alt="imagen" class="responsive-img"> */
+
+.responsive-img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* angulos */
+  deg 
+grad
+rad
+turn
+
+/* time */
+/* milisegundos */
+ms
+/* segundos */
+s
+
+/* frecuencias */
+/* hercios */
+Hz
+/* kilo hercios */
+kHz
+
+/* colors */
+
+/* color name */
+rgb(x,y,z) -> (red, green, blue)
+rgb(x%,y%,z%) -> (red, green, blue)
+rgba(x,y,z,alpha) -> (red,green,blue, alpha)
+#rrggbb
+hsl(hue,saturation, lightness) -> hsl(0,100%,50%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

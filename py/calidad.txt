@@ -1,0 +1,72 @@
+preveenir que el producto salga con defectos
+-- todo esto es preventido (producto cero defectos)
+Costos de prevencion:
+planificacion de la calidad :
+
+Costros de evaluacion: 
+  garantizar que los productos esten bastante bien 
+  inspeccionar todos los procesos para ver si los productos salen o no sin defectos 
+ 
+Costos de fallas: 
+  Costos de fallas internas
+    Encontrar errores en el procesos
+    Costo de fallas en un ambito mas alto habra un costo alto
+
+  Costos de fallas externas
+  
+    Reporte del cliente 
+    Experiencia del usuario
+
+  Walter shewhart : ciclo PECA
+
+  - Planear
+  - Ejecutar
+  - Comprobar 
+  - Ajustar
+
+
+Sistema de Gestion : Kaora Ishikawa 
+
+Inicia y termina con la educacion -- y se lleva a la capacitacion 
+
+Entender lo que el cliente quiere 
+
+Calidad alcancaza cuando see hacen responsables 
+
+Formacion de circulos de calidad de acuerdo a los objetivos de de la empresa 
+
+Diagrama de causa y efecto 
+
+Explora causaas potenciaeles y Efectos 
+
+Concepto de calidad - Philip Crosby
+
+la calidad noc cuesta
+Alcanzar los requiriemietnos 
+Tiempo - Talento - Tesoro
+Filosofia de Cero Defectos
+Hacer las cosas bien desde la primera vez 
+eviar la REpeticion o modificacion
+Solucionar Incidencias 
+Cumplir las espectativas del cliente y sobrepasarlas 
+EE estandar de desempeno debe ser de cero de defectos 
+La medicion de la calidad es el precio del incumplimiento
+
+DIAGRAMA DE CONTROL 
+
+conocido como grafico de control , se utiliza para monitorear procesos 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
