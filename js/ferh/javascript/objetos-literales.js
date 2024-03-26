@@ -32,10 +32,25 @@ console.log('vivo', personaje[x]);
 delete personaje.edad;
 console.log(personaje);
 
-personaje.casado = true;
+personaje.casado = false;
 
 // para saber cuales son las variables del objeto
 const entriesPares = Object.entries(personaje);
 console.log(entriesPares);
+
+// congela las propiedades
+Object.freeze(personaje);
+personaje.dinero = 1000000;
+personaje.casado = true;
+// ojo freeze no afecta a los objetos dentro de objetos
+personaje.coords.lat = 1298.33;
+console.log(personaje);
+
+// imprime las keys de objeto
+const propiedades = Object.getOwnPropertyNames(personaje);
+console.log(propiedades);
+// imprime los valores del objeto
+const valores = Object.values(personaje);
+console.log(valores);
 
 

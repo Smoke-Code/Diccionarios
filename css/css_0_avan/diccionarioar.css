@@ -130,6 +130,7 @@ boxx{
   /* es mejor usarlo cuando tenemos tamanos ya asignados  */
   box-sizing: border-box; /* usalo en el selector universal para que sea mejor */ 
   /* si el contenido no entra puedes usaar el siguiente  */
+  /* ten en cuenta que generara una barra de scroll para ver las imagenes que vienen despues  */
   overflow: hidden; /*oculta */
   overflow: scroll; /*crea un scroll para dsplazarte*/
   padding-top: 20px;
